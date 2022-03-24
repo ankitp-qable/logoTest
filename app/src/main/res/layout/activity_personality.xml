@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="personalityVM" type="com.ankitsapplication.app.modules.personality.data.viewmodel.PersonalityVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearGroup95"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_52pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearAppBar"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageBack"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_back_4"/>
+                <TextView android:alpha="0.8" android:ellipsize="end"
+                    android:id="@+id/txtPersonality"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_16pxv"
+                    android:layout_marginStart="@dimen/_148pxh"
+                    android:layout_marginTop="@dimen/_17pxv"
+                    android:layout_weight="0.63"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{personalityVM.personalityModel.txtPersonality}"
+                    style="@style/txtPoppinssemibold18" tools:text="@string/lbl_personality"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearPersonality"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearProfileimage"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_40pxh"
+                    android:layout_marginStart="@dimen/_40pxh"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageProfileimage"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_139pxh"
+                        android:layout_marginEnd="@dimen/_39pxh"
+                        android:layout_marginStart="@dimen/_46pxh"
+                        android:layout_width="@dimen/_139pxh"
+                        android:scaleType="fitXY" circular="@{true}"
+                        imageRes="@{@drawable/img_profileimage}" tools:src="@drawable/img_profileimage"/>
+                    <FrameLayout android:id="@+id/frameGroup93"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_33pxv"
+                        android:layout_marginTop="@dimen/_12pxv" android:layout_width="@dimen/_224pxh">
+                        <TextView android:alpha="0.8"
+                            android:ellipsize="end"
+                            android:id="@+id/txtEditPhoto"
+                            android:layout_gravity="start"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_7pxv"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{personalityVM.personalityModel.txtEditPhoto}"
+                            style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_edit_photo"/>
+                        <View android:id="@+id/viewBackground"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_33pxv"
+                            android:layout_marginEnd="@dimen/_40pxh"
+                            android:layout_marginStart="@dimen/_40pxh" android:layout_width="@dimen/_102pxh"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearUsername"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_41pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:alpha="0.4"
+                        android:ellipsize="end"
+                        android:id="@+id/txtUserName"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{personalityVM.personalityModel.txtUserName}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/lbl_username"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_gray_900_0c_radius_10"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_adalahalcana"
+                        android:id="@+id/etUsername"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_21pxv"
+                        android:singleLine="true"
+                        android:text="@={personalityVM.personalityModel.etUsernameValue}"
+                        android:textColorHint="@color/gray_900" style="@style/etRoundedOutline_4"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFirstname"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:alpha="0.4"
+                        android:ellipsize="end"
+                        android:id="@+id/txtFirstname"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{personalityVM.personalityModel.txtFirstname}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/lbl_first_name"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_gray_900_0c_radius_10"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_alcanasatre"
+                        android:id="@+id/etFirstname"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_21pxv"
+                        android:singleLine="true"
+                        android:text="@={personalityVM.personalityModel.etFirstnameValue}"
+                        android:textColorHint="@color/gray_900" style="@style/etRoundedOutline_4"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearLastname"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:alpha="0.4"
+                        android:ellipsize="end"
+                        android:id="@+id/txtLastname"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{personalityVM.personalityModel.txtLastname}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/lbl_last_name"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_gray_900_0c_radius_10"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_fourta"
+                        android:id="@+id/etLastname"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_21pxv"
+                        android:singleLine="true"
+                        android:text="@={personalityVM.personalityModel.etLastnameValue}"
+                        android:textColorHint="@color/gray_900" style="@style/etRoundedOutline_4"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearHobby"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:alpha="0.4"
+                        android:ellipsize="end"
+                        android:id="@+id/txtHobby"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{personalityVM.personalityModel.txtHobby}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/lbl_hobby"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_gray_900_0c_radius_10"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_sleep"
+                        android:id="@+id/etHobby"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_21pxv"
+                        android:singleLine="true"
+                        android:text="@={personalityVM.personalityModel.etHobbyValue}"
+                        android:textColorHint="@color/gray_900" style="@style/etRoundedOutline_4"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearDateofbirth"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:alpha="0.4"
+                        android:ellipsize="end"
+                        android:id="@+id/txtDateofbirth"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{personalityVM.personalityModel.txtDateofbirth}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/lbl_date_of_birth"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_gray_900_0c_radius_10"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_28_may_2002"
+                        android:id="@+id/etPrice"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_21pxv"
+                        android:singleLine="true"
+                        android:text="@={personalityVM.personalityModel.etPriceValue}"
+                        android:textColorHint="@color/gray_900" style="@style/etRoundedOutline_4"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearCountry"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:alpha="0.4"
+                        android:ellipsize="end"
+                        android:id="@+id/txtCountry"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{personalityVM.personalityModel.txtCountry}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/lbl_country"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_gray_900_0c_radius_10"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_indonesian2"
+                        android:id="@+id/etCountry"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_21pxv"
+                        android:singleLine="true"
+                        android:text="@={personalityVM.personalityModel.etCountryValue}"
+                        android:textColorHint="@color/gray_900" style="@style/etRoundedOutline_4"/>
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:clickable="true" android:ellipsize="end"
+                    android:gravity="center"
+                    android:id="@+id/btnChangeSave"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_34pxv"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_19pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_change_save"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_2" tools:text="@string/lbl_change_save"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

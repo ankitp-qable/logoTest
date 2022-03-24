@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="languageVM" type="com.ankitsapplication.app.modules.language.data.viewmodel.LanguageVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearLanguage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageBack"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_52pxv"
+            android:layout_width="@dimen/_60pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_back_3"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearLanguege"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_35pxv"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:alpha="0.8" android:ellipsize="end"
+                android:id="@+id/txtLanguage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtLanguage}"
+                style="@style/txtPoppinssemibold28" tools:text="@string/lbl_language"/>
+            <TextView android:alpha="0.4" android:ellipsize="end"
+                android:id="@+id/txtYoursettingss"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtYoursettingss}"
+                style="@style/txtPoppinsmedium12" tools:text="@string/msg_your_settings_s"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnIndonesian"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_87pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_21pxv" android:singleLine="true"
+            android:text="@string/lbl_indonesian"
+            android:textAllCaps="false" style="@style/btnSolidRounded_3" tools:text="@string/lbl_indonesian"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnEnglish"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_14pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_21pxv" android:singleLine="true"
+            android:text="@string/lbl_english"
+            android:textAllCaps="false" style="@style/btnSolidRounded_4" tools:text="@string/lbl_english"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnSave"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_243pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_19pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/lbl_save" android:textAllCaps="false"
+            style="@style/btnSolidRounded_2" tools:text="@string/lbl_save"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="workToday1RowModel" type="com.ankitsapplication.app.modules.worktoday.data.model.WorkToday1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearGroup"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_A700_7e">
+        <View
+            android:background="@drawable/rectangle_bg_deep_orange_500_6c_radius_6"
+            android:id="@+id/viewStatuscolor"
+            android:layout_height="@dimen/_26pxh"
+            android:layout_marginBottom="@dimen/_15pxv"
+            android:layout_marginStart="@dimen/_28pxh"
+            android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_28pxh"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtResearchProduc"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_18pxv"
+            android:layout_marginStart="@dimen/_24pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_weight="0.85" android:layout_width="0dp"
+            android:singleLine="true"
+            android:text="@{workToday1RowModel.txtResearchProduc}"
+            style="@style/txtPoppinsregular14" tools:text="@string/msg_research_produc"/>
+        <ImageView android:id="@+id/imageArrowIcon"
+            android:layout_height="@dimen/_5pxh"
+            android:layout_marginBottom="@dimen/_25pxv"
+            android:layout_marginEnd="@dimen/_27pxh"
+            android:layout_marginStart="@dimen/_29pxh"
+            android:layout_marginTop="@dimen/_25pxv"
+            android:layout_width="@dimen/_3pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_arrowicon"/>
+    </LinearLayout>
+</layout>
