@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="adacanaVM" type="com.ankitsapplication.app.modules.adacana.data.viewmodel.AdacanaVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameAdacana"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <ImageView android:clickable="true" android:id="@+id/imageLogo"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_325pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_68pxh"
+            android:layout_marginStart="@dimen/_68pxh"
+            android:layout_marginTop="@dimen/_244pxv"
+            android:layout_width="@dimen/_238pxh"
+            android:scaleType="fitXY" imageRes="@{@drawable/img_logo}" tools:src="@drawable/img_logo"/>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="wishListVM" type="com.ankitsapplication.app.modules.wishlist.data.viewmodel.WishListVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearWishList"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageBack"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_42pxv"
+            android:layout_width="@dimen/_67pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_back_2"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearMakeawishlis"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_42pxv"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:alpha="0.8" android:ellipsize="end"
+                android:id="@+id/txtMakeawishlis"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{wishListVM.wishListModel.txtMakeawishlis}"
+                style="@style/txtPoppinssemibold28" tools:text="@string/msg_make_a_wish_lis"/>
+            <TextView android:alpha="0.4" android:ellipsize="end"
+                android:id="@+id/txtMakeyourjobe"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{wishListVM.wishListModel.txtMakeyourjobe}"
+                style="@style/txtPoppinsmedium12" tools:text="@string/msg_make_your_job_e"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearTasktodo"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_85pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:alpha="0.54" android:ellipsize="end"
+                android:id="@+id/txtTasktodo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{wishListVM.wishListModel.txtTasktodo}"
+                style="@style/txtPoppinsmedium12" tools:text="@string/lbl_task_todo"/>
+            <EditText
+                android:background="@drawable/rectangle_border_gray_900_0c_radius_14"
+                android:drawablePadding="@dimen/_10pxh"
+                android:drawableStart="@drawable/img_calendar_icon"
+                android:ellipsize="end"
+                android:hint="@string/msg_create_action_m"
+                android:id="@+id/etTaskfield"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingStart="@dimen/_18pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@={wishListVM.wishListModel.etTaskfieldValue}"
+                android:textColorHint="@color/gray_900" style="@style/etRoundedOutline_2"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearDate"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_17pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:alpha="0.54" android:ellipsize="end"
+                android:id="@+id/txtDate"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{wishListVM.wishListModel.txtDate}"
+                style="@style/txtPoppinsmedium12" tools:text="@string/lbl_date"/>
+            <EditText
+                android:background="@drawable/rectangle_border_gray_900_0c_radius_14"
+                android:drawablePadding="@dimen/_10pxh"
+                android:drawableStart="@drawable/img_calendar_icon_1"
+                android:ellipsize="end"
+                android:hint="@string/lbl_tt_mm_yy"
+                android:id="@+id/etDatefield"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingStart="@dimen/_18pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@={wishListVM.wishListModel.etDatefieldValue}"
+                android:textColorHint="@color/gray_900" style="@style/etRoundedOutline_2"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAttachments"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_17pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:alpha="0.54" android:ellipsize="end"
+                android:id="@+id/txtAttachments"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{wishListVM.wishListModel.txtAttachments}"
+                style="@style/txtPoppinsmedium12" tools:text="@string/lbl_attachments"/>
+            <EditText
+                android:background="@drawable/rectangle_border_gray_900_33_radius_14"
+                android:drawablePadding="@dimen/_10pxh"
+                android:drawableStart="@drawable/img_paper_plus_icon"
+                android:ellipsize="end"
+                android:hint="@string/lbl_maximum_10_mb"
+                android:id="@+id/etFilesize"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingStart="@dimen/_18pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@={wishListVM.wishListModel.etFilesizeValue}"
+                android:textColorHint="@color/gray_900" style="@style/etRoundedOutline_3"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnMakeAWishList"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_35pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
+            android:text="@string/msg_make_a_wish_lis"
+            android:textAllCaps="false" style="@style/btnSolidRounded_2" tools:text="@string/msg_make_a_wish_lis"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="workTodayVM" type="com.ankitsapplication.app.modules.worktoday.data.viewmodel.WorkTodayVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearWorkToday"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearGroup86"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginTop="@dimen/_43pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <ImageView android:id="@+id/imageBack"
+                android:layout_height="@dimen/_60pxh"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_width="@dimen/_67pxh"
+                android:scaleType="fitXY" android:src="@drawable/img_back"/>
+            <TextView android:alpha="0.8" android:ellipsize="end"
+                android:id="@+id/txtMakeawishlis"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_marginTop="@dimen/_41pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{workTodayVM.workTodayModel.txtMakeawishlis}"
+                style="@style/txtPoppinssemibold28" tools:text="@string/lbl_work_today_s"/>
+            <TextView android:alpha="0.4" android:ellipsize="end"
+                android:id="@+id/txtMakeyourjobe"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{workTodayVM.workTodayModel.txtMakeyourjobe}"
+                style="@style/txtPoppinsmedium12" tools:text="@string/msg_make_your_job_e"/>
+            <LinearLayout android:id="@+id/linearGroup85"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_79pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearDate"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4pxv"
+                    android:layout_marginStart="@dimen/_32pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_weight="0.62"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <TextView android:alpha="0.4"
+                        android:ellipsize="end"
+                        android:id="@+id/txtToday"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{workTodayVM.workTodayModel.txtToday}"
+                        style="@style/txtPoppinsmedium14_1" tools:text="@string/lbl_today"/>
+                    <TextView android:alpha="0.6"
+                        android:ellipsize="end"
+                        android:id="@+id/txtDate"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{workTodayVM.workTodayModel.txtDate}"
+                        style="@style/txtPoppinssemibold16" tools:text="@string/lbl_02_april_2021"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageCalendaricon"
+                    android:layout_height="@dimen/_58pxh"
+                    android:layout_marginEnd="@dimen/_32pxh"
+                    android:layout_marginStart="@dimen/_151pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_calendaricon"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerWorkToday"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_marginTop="@dimen/_59pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_5pxh}" tools:itemCount="2" tools:listitem="@layout/row_work_today1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:clickable="true" android:ellipsize="end"
+                android:gravity="center"
+                android:id="@+id/btnMakeAWishList"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_marginTop="@dimen/_63pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:text="@string/msg_make_a_wish_lis"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_2" tools:text="@string/msg_make_a_wish_lis"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
